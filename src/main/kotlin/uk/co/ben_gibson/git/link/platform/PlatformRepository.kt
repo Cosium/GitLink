@@ -35,7 +35,8 @@ class PlatformRepository {
                 UUID.fromString(it.id),
                 it.displayName,
                 Icons.GIT,
-                setOf(Host(it.baseUrl))
+                setOf(Host(it.baseUrl)),
+                it.pullRequestWorkflowSupported
             )
         }
 

@@ -147,6 +147,12 @@ private class CustomPlatformDialog(customPlatform: CustomHostSettings? = null) :
                 .withValidationOnApply { notBlank(it.text) ?: commitTemplate(it.text) }
                 .comment(message("settings.custom-platform.add-dialog.field.commit-template.comment"))
         }
+        row(message("settings.custom-platform.add-dialog.field.pull-request-workflow-supported.label")) {
+            checkBox(
+                "",
+                platform::pullRequestWorkflowSupported
+            )
+        }
         row() {
             scrollPane(substitutionReferenceTable)
         }

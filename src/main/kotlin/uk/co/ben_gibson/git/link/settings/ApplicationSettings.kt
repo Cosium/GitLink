@@ -43,7 +43,8 @@ class ApplicationSettings : PersistentStateComponent<ApplicationSettings?> {
         var baseUrl: String = "",
         var fileAtBranchTemplate: String = "",
         var fileAtCommitTemplate: String = "",
-        var commitTemplate: String = ""
+        var commitTemplate: String = "",
+        var pullRequestWorkflowSupported: Boolean = true
     )
 
     fun findPlatformIdByCustomDomain(domain: Host) = customHostDomains

@@ -94,4 +94,4 @@ class Gerrit() : Platform(
     false
 )
 
-class Custom(id: UUID, name: String, icon: Icon, domains: Set<Host> = setOf()) : Platform(id, name, icon, domains)
+class Custom(id: UUID, name: String, icon: Icon, domains: Set<Host> = setOf(), pullRequestWorkflowSupported: Boolean = true) : Platform(id, name, icon, domains, pullRequestWorkflowSupported)
